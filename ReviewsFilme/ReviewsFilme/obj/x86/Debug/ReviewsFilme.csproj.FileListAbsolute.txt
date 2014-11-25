@@ -1,0 +1,16 @@
+C:\Users\Manita\Desktop\ReviewsFilme\ReviewsFilme\bin\Debug\Database1.mdf
+C:\Users\Manita\Desktop\ReviewsFilme\ReviewsFilme\bin\Debug\Database1_log.ldf
+C:\Users\Manita\Desktop\ReviewsFilme\ReviewsFilme\bin\Debug\ReviewsFilme.exe.config
+C:\Users\Manita\Desktop\ReviewsFilme\ReviewsFilme\bin\Debug\ReviewsFilme.exe
+C:\Users\Manita\Desktop\ReviewsFilme\ReviewsFilme\bin\Debug\ReviewsFilme.pdb
+C:\Users\Manita\Desktop\ReviewsFilme\ReviewsFilme\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Manita\Desktop\ReviewsFilme\ReviewsFilme\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Manita\Desktop\ReviewsFilme\ReviewsFilme\obj\x86\Debug\ReviewsFilme.csproj.GenerateResource.Cache
+C:\Users\Manita\Desktop\ReviewsFilme\ReviewsFilme\obj\x86\Debug\ReviewsFilme.exe
+C:\Users\Manita\Desktop\ReviewsFilme\ReviewsFilme\obj\x86\Debug\ReviewsFilme.pdb
+C:\Users\Manita\Desktop\ReviewsFilme\ReviewsFilme\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
+C:\Users\Manita\Desktop\ReviewsFilme\ReviewsFilme\obj\x86\Debug\WindowsFormsApplication1.Form3.resources
+C:\Users\Manita\Desktop\ReviewsFilme\ReviewsFilme\obj\x86\Debug\ReviewsFilme.csprojResolveAssemblyReference.cache
+C:\Users\Manita\Desktop\ReviewsFilme\ReviewsFilme\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Manita\Desktop\ReviewsFilme\ReviewsFilme\obj\x86\Debug\WindowsFormsApplication1.Form4.resources
+C:\Users\Manita\Desktop\ReviewsFilme\ReviewsFilme\obj\x86\Debug\WindowsFormsApplication1.Form5.resources
