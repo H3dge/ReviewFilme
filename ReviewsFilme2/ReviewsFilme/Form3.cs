@@ -35,6 +35,35 @@ namespace WindowsFormsApplication1
         int nr;
         int nrrich;
 
+        ///////  ultimele filme
+
+        public class Result
+        {
+            public bool adult { get; set; }
+            public string backdrop_path { get; set; }
+            public int id { get; set; }
+            public string original_title { get; set; }
+            public string release_date { get; set; }
+            public string poster_path { get; set; }
+            public double popularity { get; set; }
+            public string title { get; set; }
+            public double vote_average { get; set; }
+            public int vote_count { get; set; }
+        }
+
+       /* public class RootObject
+        {
+            public int page { get; set; }
+            public List<Result> results { get; set; }
+            public int total_pages { get; set; }
+            public int total_results { get; set; }
+        }*/
+        string data_azi;
+        string data_ieri;
+        List<string> filme = new List<string>();
+        List<string> empty = new List<string>();
+
+        ///////  date film
         public class RootObject
         {
             public string Title { get; set; }
@@ -57,6 +86,11 @@ namespace WindowsFormsApplication1
             public string imdbID { get; set; }
             public string Type { get; set; }
             public string Response { get; set; }
+            // ultimele filme
+            public int page { get; set; }
+            public List<Result> results { get; set; }
+            public int total_pages { get; set; }
+            public int total_results { get; set; }
         }
 
         public class MovieData
@@ -220,6 +254,57 @@ namespace WindowsFormsApplication1
             if (decizie == "da")
                 MessageBox.Show("da");
         }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            int count;
+            if (textBox2.TextLength == 0)
+            {
+                count = 5;
+            }
+            else
+            count = Convert.ToInt32(textBox2.Text);
+
+            listBox1.DataSource = empty;
+            filme.Clear();
+            data_azi = DateTime.Today.ToString("yyyy-M-d"); //!!!
+            data_ieri = DateTime.Today.AddDays(-count).ToString("yyyy-M-d");
+
+            try
+            {
+                WebClient webclient = new WebClient();
+                webclient.Encoding = Encoding.UTF8;
+                string json = webclient.DownloadString("http://api.themoviedb.org/3/discover/movie?primary_release_date.gte=" + data_ieri + "&primary_release_date.lte=" + data_azi + "&api_key=fdbc3f7a4347c8eecdd244d614b50a7e");
+                RootObject data = JsonConvert.DeserializeObject<RootObject>(json);
+                for (int j = 0; j <= 15 ; j++)
+                {
+                    filme.Add(data.results[j].title);
+                    //richTextBox2.Text += data.results[j].release_date + Environment.NewLine;
+                    // MessageBox.Show(data.results[j].title);
+                    
+                }
+               // MessageBox.Show("m2");
+                
+                listBox1.DataSource = filme;
+            }
+            catch { }
+        }
+
+        private void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            string numeFilm="2";
+            int index = this.listBox1.IndexFromPoint(e.Location);
+            if (index != System.Windows.Forms.ListBox.NoMatches)
+            {
+                numeFilm=listBox1.SelectedItem.ToString();
+                
+            }
+            textBox1.Text = numeFilm;
+            button1.PerformClick();
+
+        }
+
+       
         
     }
 }
